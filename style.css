@@ -1,0 +1,110 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffebf0;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(135deg, #ffebf0, #f0fff0);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff66b2;
+    margin-bottom: 30px;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #ff66b2;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff3385;
+    transform: scale(1.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Кнопка "Нет" в абсолютном положении */
+#noButton {
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+/* Стиль для блока с подарком */
+#giftMessage {
+    display: none;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px;
+    max-width: 400px;
+    width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+#giftMessage h2 {
+    color: #32cd32;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#giftMessage p {
+    font-size: 1.6rem;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+#surpriseButton {
+    background-color: #32cd32;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#surpriseButton:hover {
+    background-color: #228b22;
+}
+
+/* Путь выбора */
+#pathSelection {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Анимация для кнопки "Нет" */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(15px); }
+    50% { transform: translateX(-15px); }
+    75% { transform: translateX(15px); }
+    100% { transform: translateX(0); }
+}
+
+#noButton.shake {
+    animation: shake 0.5s ease-in-out;
+}
